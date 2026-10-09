@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-earth-900 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-700 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-primary-200 bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-all hover:bg-primary-50 active:scale-95 disabled:opacity-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-earth-200 bg-transparent px-6 py-3 text-sm font-semibold text-earth-700 transition-all hover:bg-earth-50 active:scale-95;
+  }
+  .card {
+    @apply rounded-2xl border border-earth-100 bg-white shadow-sm transition-all;
+  }
+  .input {
+    @apply w-full rounded-xl border border-earth-200 bg-white px-4 py-2.5 text-sm text-earth-900 placeholder:text-earth-400 transition-all focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-earth-700;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3eee5;
+}
+::-webkit-scrollbar-thumb {
+  background: #bf9c72;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ad8254;
+}
